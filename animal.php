@@ -1,20 +1,24 @@
 <?php
 
-//import class / intance
-require_once "index.php";
+//class
+class Animal {
+  //property
+  public $legs = 2;
+  public $cold_blooded = false;
 
-$sheep = new Animal("shaun");
-
-echo $sheep->name; // "shaun"
-echo "<br>";
-echo $sheep->legs; // 2
-echo "<br>";
-echo $sheep->cold_blooded; // false
-
-
-
-// NB: Boleh juga menggunakan method get (get_name(), get_legs(), get_cold_blooded())
-
+  public function __construct($name){
+    $this->name = $name;
+  }
+  function getName(){
+    echo $this->name;
+  }
+  function get_cold_blooded(){
+    echo $this->cold_blooded;
+  }
+}
 
 
-?>
+
+
+
+ ?>

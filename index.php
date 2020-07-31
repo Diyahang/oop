@@ -1,22 +1,34 @@
 <?php
 
-//class
-class Animal {
-  //property
-  public $legs = 2;
-  public $cold_blooded = false;
-
-  public function __construct($name){
-    $this->name = $name;
-  }
-  function getName(){
-    echo $this->name;
-  }
-  function get_cold_blooded(){
-    echo $this->cold_blooded;
-  }
-}
+//import class / intance
+require_once "animal.php";
+require_once "ape.php";
+require_once "frog.php";
 
 
+$sheep = new Animal("shaun");
 
- ?>
+echo $sheep->name; // "shaun"
+echo "<br>";
+echo $sheep->legs; // 2
+echo "<br>";
+echo $sheep->cold_blooded; // false
+
+
+$sungokong = new Ape("kera sakti");
+echo $sungokong->yell; // "Auooo"
+echo "<br>";
+$kodok = new Frog("buduk");
+echo $kodok->jump ; // "hop hop"
+
+
+
+
+
+
+
+// NB: Boleh juga menggunakan method get (get_name(), get_legs(), get_cold_blooded())
+
+
+
+?>
